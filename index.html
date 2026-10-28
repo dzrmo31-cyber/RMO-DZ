@@ -5,20 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RMO DZ — FC2 ONLINE | منصة اللعب الجماعي</title>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#101318; color:#E6E8EB; font-family:'Segoe UI',Tahoma,sans-serif; line-height:1.9; }
-  .hero { background:linear-gradient(135deg,#2B2013,#14171C 55%,#1B2330); text-align:center; padding:70px 20px 50px; border-bottom:2px solid #3A2E1B; }
-  .diamond { color:#E8A33D; font-size:34px; }
-  .badge { display:inline-block; background:#10131A; border:1px solid #B45309; color:#F7B74A; padding:8px 26px; border-radius:10px; font-weight:800; font-size:26px; letter-spacing:1px; margin-bottom:14px; }
-  h1 { font-size:34px; } h1 span { color:#C8CDD5; font-size:20px; font-weight:normal; }
-  .tag { color:#8A93A0; font-size:15px; margin-top:8px; }
-  .card { max-width:820px; margin:26px auto; background:#1C222B; border:1px solid #2A323E; border-radius:14px; padding:26px 30px; }
-  h2 { color:#E8A33D; font-size:20px; margin-bottom:12px; }
-  ul { padding-right:22px; } li { margin:6px 0; }
-  .btn { display:inline-block; background:linear-gradient(#F7B74A,#B45309); color:#14171C; font-weight:bold; padding:13px 38px; border-radius:8px; text-decoration:none; font-size:17px; }
-  .muted { color:#5A6470; font-size:12.5px; text-align:center; margin-top:10px; }
-  a { color:#E8A33D; }
-  footer { text-align:center; color:#5A6470; font-size:12px; padding:26px; border-top:1px solid #242B35; margin-top:30px; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#101318;color:#E6E8EB;font-family:'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+.hero{background:linear-gradient(135deg,#2B2013,#14171C 55%,#1B2330);text-align:center;padding:70px 20px 50px;border-bottom:2px solid #3A2E1B}
+.badge{display:inline-block;background:#10131A;border:1px solid #B45309;color:#F7B74A;padding:8px 26px;border-radius:10px;font-weight:800;font-size:26px;letter-spacing:1px;margin-bottom:14px}
+h1{font-size:34px}h1 span{color:#C8CDD5;font-size:20px;font-weight:normal}
+.tag{color:#8A93A0;font-size:15px;margin-top:8px}
+.card{max-width:820px;margin:26px auto;background:#1C222B;border:1px solid #2A323E;border-radius:14px;padding:26px 30px}
+h2{color:#E8A33D;font-size:20px;margin-bottom:12px}
+ul{padding-right:22px}li{margin:6px 0}
+.btn{display:inline-block;background:linear-gradient(#F7B74A,#B45309);color:#14171C;font-weight:bold;padding:13px 38px;border-radius:8px;text-decoration:none;font-size:17px}
+.muted{color:#5A6470;font-size:12.5px;text-align:center;margin-top:10px}
+a{color:#E8A33D}
+footer{text-align:center;color:#5A6470;font-size:12px;padding:26px;border-top:1px solid #242B35;margin-top:30px}
+#dtw{position:fixed;inset:0;background:rgba(10,12,16,.93);z-index:9999;display:none;align-items:center;justify-content:center;text-align:center;padding:24px}
+#dtw .bx{max-width:470px;background:#1C222B;border:2px solid #B45309;border-radius:14px;padding:28px}
+#dtw h3{color:#F7B74A;font-size:20px;margin-bottom:10px}
+#dtw p{color:#C8CDD5;font-size:14px;margin-bottom:14px}
+#dtw button{background:linear-gradient(#F7B74A,#B45309);border:0;color:#14171C;font-weight:bold;padding:10px 26px;border-radius:8px;cursor:pointer}
+#tst{position:fixed;bottom:18px;right:18px;background:#1C222B;border:1px solid #B45309;color:#F7B74A;padding:10px 18px;border-radius:10px;font-size:13px;display:none;z-index:9998;box-shadow:0 4px 18px rgba(0,0,0,.6)}
 </style>
 </head>
 <body>
@@ -66,5 +71,25 @@
   <a href="terms.html">شروط الاستخدام</a>
 </footer>
 
+<div id="dtw"><div class="bx"><h3>⚠️ تحذير — أدوات المطور مفتوحة</h3><p>هذه المنصة مملوكة لـ <b>RMO DZ</b> ومحمية قانونياً. أي محاولة لفحص أو نسخ محتواها أو تصميمها مخالفة. أغلق أدوات المطور للمتابعة.</p><button onclick="this.closest('#dtw').style.display='none'">إغلاق التحذير</button></div></div>
+<div id="tst"></div>
+<script>
+(function(){
+"use strict";
+var M="\u00a9 2026 RMO DZ \u2014 \u0627\u0644\u0645\u062d\u062a\u0648\u0649 \u0645\u062d\u0645\u064a. \u0623\u064a \u0641\u062d\u0635 \u0623\u0648 \u0646\u0633\u062e \u0645\u062e\u0627\u0644\u0641\u0629.";
+function T(t){var e=document.getElementById("tst");e.textContent=t;e.style.display="block";clearTimeout(e._h);e._h=setTimeout(function(){e.style.display="none"},3500)}
+function W(){document.getElementById("dtw").style.display="flex";try{console.clear()}catch(_){ }}
+document.addEventListener("contextmenu",function(e){e.preventDefault();T("\ud83d\udeab \u0627\u0644\u0646\u0642\u0631 \u0627\u0644\u0623\u064a\u0645\u0646 \u0645\u0639\u0637\u0651\u0644 \u2014 \u0627\u0644\u0645\u062d\u062a\u0648\u0649 \u0645\u062d\u0645\u064a \u00a9 RMO DZ")});
+document.addEventListener("keydown",function(e){
+var f12=e.key==="F12"||e.keyCode===123;
+var cs=e.ctrlKey&&e.shiftKey&&(e.key==="I"||e.key==="i"||e.keyCode===73||e.key==="J"||e.key==="j"||e.keyCode===74||e.key==="C"||e.key==="c"||e.keyCode===67);
+var cu=e.ctrlKey&&(e.key==="u"||e.key==="U"||e.keyCode===85);
+var sv=e.ctrlKey&&(e.key==="s"||e.key==="S"||e.keyCode===83);
+if(f12||cs||cu||sv){e.preventDefault();W();T("\u26a0\ufe0f "+M)}});
+function C(){if((window.outerWidth-window.innerWidth>220)||(window.outerHeight-window.innerHeight>220))W()}
+setInterval(C,1200);
+try{console.log("%c\u26a0\ufe0f \u062a\u062d\u0630\u064a\u0631","color:#F7B74A;font:700 26px Segoe UI");console.log("%c"+M,"color:#E8A33D;font:13px Segoe UI");console.log("%c\u0641\u062d\u0635 \u0627\u0644\u0643\u0648\u062f \u0623\u0648 \u0627\u0644\u062e\u0644\u0641\u064a\u0629 \u0644\u0627 \u064a\u0641\u064a\u062f\u0643 \u2014 \u0623\u0633\u0631\u0627\u0631 \u0627\u0644\u0645\u0646\u0635\u0629 \u0627\u0644\u062d\u0642\u064a\u0642\u064a\u0629 \u063a\u064a\u0631 \u0645\u0648\u062c\u0648\u062f\u0629 \u0647\u0646\u0627 \u0648\u0645\u062d\u0645\u064a\u0629 \u062a\u0634\u0641\u064a\u0631\u064a\u0627\u064b.","color:#8A93A0;font:12px Segoe UI")}catch(_){ }
+})();
+</script>
 </body>
 </html>
